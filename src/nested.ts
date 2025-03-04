@@ -1,4 +1,4 @@
-import { queryByTestId } from "@testing-library/dom";
+//import { queryByTestId } from "@testing-library/dom";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
