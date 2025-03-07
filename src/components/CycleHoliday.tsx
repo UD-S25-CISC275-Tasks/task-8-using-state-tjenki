@@ -3,26 +3,26 @@ import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): React.JSX.Element {
     type Holiday =
-        | "Valentines Day: 🩷"
-        | "Memorial Day: 👩🏿‍✈️"
-        | "Easter: 🐰"
-        | "Christmas: 🎅🏿"
-        | "Juneteenth: 💃🏿";
+        | "Holiday: 🩷"
+        | "Holiday: 👩🏿‍✈️"
+        | "Holiday: 🐰"
+        | "Holiday: 🎅🏿"
+        | "Holiday: 💃🏿";
     let HOLIDAY_TIME_TRANSITIONS: Record<Holiday, Holiday> = {
-        "Valentines Day: 🩷": "Easter: 🐰",
-        "Easter: 🐰": "Memorial Day: 👩🏿‍✈️",
-        "Memorial Day: 👩🏿‍✈️": "Juneteenth: 💃🏿",
-        "Juneteenth: 💃🏿": "Christmas: 🎅🏿",
-        "Christmas: 🎅🏿": "Valentines Day: 🩷"
+        "Holiday: 🩷": "Holiday: 🐰",
+        "Holiday: 🐰": "Holiday: 👩🏿‍✈️",
+        "Holiday: 👩🏿‍✈️": "Holiday: 💃🏿",
+        "Holiday: 💃🏿": "Holiday: 🎅🏿",
+        "Holiday: 🎅🏿": "Holiday: 🩷"
     };
     let HOLIDAY_ALPHABET_TRANSITIONS: Record<Holiday, Holiday> = {
-        "Christmas: 🎅🏿": "Easter: 🐰",
-        "Easter: 🐰": "Juneteenth: 💃🏿",
-        "Juneteenth: 💃🏿": "Memorial Day: 👩🏿‍✈️",
-        "Memorial Day: 👩🏿‍✈️": "Valentines Day: 🩷",
-        "Valentines Day: 🩷": "Christmas: 🎅🏿"
+        "Holiday: 🎅🏿": "Holiday: 🐰",
+        "Holiday: 🐰": "Holiday: 💃🏿",
+        "Holiday: 💃🏿": "Holiday: 👩🏿‍✈️",
+        "Holiday: 👩🏿‍✈️": "Holiday: 🩷",
+        "Holiday: 🩷": "Holiday: 🎅🏿"
     };
-    let [holiday, setHoliday] = useState<Holiday>("Juneteenth: 💃🏿");
+    let [holiday, setHoliday] = useState<Holiday>("Holiday: 💃🏿");
 
     function advanceAlphabetically(): void {
         let nextHoliday = HOLIDAY_ALPHABET_TRANSITIONS[holiday];
