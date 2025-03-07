@@ -8,7 +8,6 @@ export function RevealAnswer(): React.JSX.Element {
     }
     return (
         <div>
-            Reveal Answer
             <span>
                 <Button onClick={answervisible}>Reveal Answer</Button>
                 {visible && <div>42</div>}
